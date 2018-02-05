@@ -3,5 +3,5 @@ CFLAGS=-g -O0
 
 all: main
 
-main: main.o
-	$(CC) $(CFLAGS) $< -o $@
+main: utils.c elf-utils.o main.o
+	$(CC) $(CFLAGS) $^ -o $@
